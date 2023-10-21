@@ -124,6 +124,7 @@ class Home extends StatelessWidget {
                 ),
                 SizedBox(width: 16.0),
                 Expanded(
+
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
