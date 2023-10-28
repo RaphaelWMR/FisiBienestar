@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './NewAppointment.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -24,7 +25,12 @@ class Home extends StatelessWidget {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => AppointmentForm())
+                      );// Redirige a la nueva pantalla
+                    },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       padding: EdgeInsets.all(16.0),
