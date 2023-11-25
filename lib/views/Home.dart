@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import './NewAppointment.dart';
+import './AppointmentList.dart';
+import './Availability.dart';
+import './sign/Login.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -61,7 +64,12 @@ class Home extends StatelessWidget {
                 SizedBox(width: 16.0),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => AppointmentListScreen())
+                      );// Redirige a la nueva pantalla
+                      },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       padding: EdgeInsets.all(16.0),
@@ -100,7 +108,12 @@ class Home extends StatelessWidget {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => AppointmentAvailabilityScreen())
+                      );// Redirige a la nueva pantalla
+                    },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       padding: EdgeInsets.all(16.0),
@@ -132,7 +145,12 @@ class Home extends StatelessWidget {
                 Expanded(
 
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => Login()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       padding: EdgeInsets.all(16.0),
